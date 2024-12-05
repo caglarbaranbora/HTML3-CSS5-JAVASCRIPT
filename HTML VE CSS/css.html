@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS</title>
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <style>
+      #parag1 {
+        text-align: left;
+        color: red;
+        /*id'si parag1 olan paragraf kırmızı renkte yapılıyor*/
+      }
+      .lefty {
+        text-align: left;
+        color: red;
+        background: yellow;
+        /*classı lefty olan paragraf kırmızı renkte yapılıyor*/
+      }
+
+      p.left {
+        text-align: left;
+        color: yellowgreen;
+      }
+      p.serif {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      p.sansserif {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p.normal {
+        font-style: normal;
+      }
+
+      p.italic {
+        font-style: italic;
+      }
+
+      p.oblique {
+        font-style: oblique;
+      }
+      p.variantsmall {
+        font-variant: small-caps;
+      }
+      p.variant {
+        font-variant: normal;
+      }
+      p.variantcommon {
+        font-variant: common-ligatures tabular-nums;
+      }
+      p.variantnocommon {
+        font-variant: nocommon-ligatures proportional-nums;
+      }
+
+      /* h1 {
+        text-align: left;
+        color: red;
+      }
+
+      h2 {
+        text-align: left;
+        color: red;
+      }
+
+      p {
+        text-align: left;
+        color: red;
+      }  yerine asagidaki gibi yazilabilir*/
+
+      .bgphoto {
+        background: white url("assets/image.png") no-repeat left top;
+        padding-right: 150;
+        font-size: xx-large;
+      }
+
+      h2,
+      p {
+        text-align: left;
+        color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>HER PARAGRAF STILDEN ETKILENECEKTIR</p>
+    <p id="para1">BU PARAGRAF DA ETKILENIR</p>
+    <p>BU DA ISTISNA DEGILDIR</p>
+    <p id="parag1">BU PARAGRAF</p>
+
+    <div>burasi bir div arka planinda resim var</div>
+    <h1 class="lefty">KIRMIZI VE SOLA YANASIK BASLIK</h1>
+    <p class="other">STILIN ETKISI YOK</p>
+    <h1 class="lefty">KIRMIZI VE SOLA YANASIK BASLIK</h1>
+
+    <div bgcolor="white">
+      <h1 class="left">BU PARAGRAF STIL BILGISINDEN ETKILENMEDI</h1>
+      <p class="left">BU PARAGRAF STIL BILGISINDEN ETKILENDI</p>
+    </div>
+
+    <div class="bgphoto">BEN PGPHOTO DIVIM</div>
+
+    <h1>CSS FONT AILESI</h1>
+    <p class="serif">Times New Roman fontu ILE YAZILDI</p>
+    <p class="sansserif">Arial fontu ILE YAZILDI.</p>
+
+    <p class="normal">NORMAL YAZI</p>
+    <p class="italic">ITALIC YAZI</p>
+    <p class="oblique">OBLIQUE YAZI</p>
+    <p class="variant">variant YAZI 123</p>
+    <p class="variantsmall">variantsmall YAZI 123</p>
+    <p class="variantcommon">variantcommon YAZI 123</p>
+    <p class="variantnocommon">variantnocommon YAZI 123</p>
+    <!-- 1 em = 16px -->
+  </body>
+</html>

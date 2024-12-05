@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>javascript</title>
+
+    <script type="text/javascript">
+      function MESAJ() {
+        alert("GUZEL YURDUM TURKIYE");
+      }
+    </script>
+
+    <script>
+      function GOSTER(kitap) {
+        var kittip = kitap.getAttribute("data-kitap-tip");
+        alert(
+          "" +
+            kitap.innerHTML +
+            " TURUNDE BIR KITAP " +
+            kittip +
+            " LERDEN OLUSUR"
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write("GUZEL YURDUM TURKIYE");
+      alert("GUZEL ISTANBUL'UM");
+    </script>
+    <br />
+
+    <script type="text/javascript">
+      // GLOBAL DEGISKEN BILDIRIMI
+      var gd = "GLOBAL DEGISKEN";
+      var sayi = 1;
+      function kont() {
+        // LOKAL DEGISKEN TANIMLANIYOR
+        // AYNI ISIMLI GLOBAL DEGISKENE GORE ONCELIKLI
+        var gd = "LOKAL DEGISKEN";
+        document.write(gd);
+      }
+      kont();
+      document.write(gd);
+    </script>
+    <br />
+
+    <script type="text/javascript">
+      var yas = 15;
+      if (yas > 18) {
+        document.write("18 YASINDAN BUYUK");
+      } else {
+        document.write("18 YASINDA YA DA DAHA KUCUK");
+      }
+    </script>
+    <br />
+
+    <script type="text/javascript">
+      function PLAKA(ad, say) {
+        alert("SEHIR ADI.." + ad + "PLAKA NO:" + say);
+      }
+      //PLAKA fonksiyonunu çağırma
+      PLAKA("ISTANBUL", 34);
+    </script>
+    <br />
+
+    <input type="button" onclick="MESAJ()" value="BUTONA TIKLA" /><br />
+
+    <h1>KITAPLAR</h1>
+    <p>Kitaplar icin tikla...:</p>
+
+    <ul>
+      <li onclick="GOSTER(this)" id="ro" data-kitap-tip="ROMAN">ROMAN</li>
+      <li onclick="GOSTER(this)" id="an" data-kitap-tip="ANI">ANI</li>
+      <li onclick="GOSTER(this)" id="si" data-kitap-tip="SIIR">SIIR</li>
+    </ul>
+  </body>
+</html>

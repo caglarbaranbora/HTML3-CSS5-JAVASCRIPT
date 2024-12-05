@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>events</title>
+    <script>
+      function KOPYA() {
+        document.getElementById("alan2").value =
+          document.getElementById("alan3").value;
+        document.getElementById("alan3").value =
+          document.getElementById("alan1").value;
+      }
+    </script>
+  </head>
+  <body>
+    1.ALAN:
+    <input type="text" id="alan1" value="GUZEL YURDUM TURKIYE..." /><br />
+    2.ALAN: <input type="text" id="alan2" /> 3.ALAN:
+    <input type="text" id="alan3" /> <br /><br />
+    <button onclick="KOPYA()">METNI KOPYALA</button>
+
+    <p>Düğme tıklanınca bir alanından 2 ve 3 alanına kopyalama yapılıyor</p>
+    <br /><br />
+
+    <canvas id="ornek" width="300" height="100" style="background: blue">
+    </canvas>
+    <script>
+      var canvas = document.getElementById("ornek");
+      var context = canvas.getContext("2d");
+      canvas.addEventListener("mousemove", handleMoveEvent, false);
+
+      function handleMoveEvent(olay) {
+        var mousePos = getMousePos(canvas, olay);
+        var ileti = "Mouse KONUMU: " + mousePos.x + "," + mousePos.y;
+        YAZileti(canvas, ileti);
+      }
+
+      function YAZileti(canvas, ileti) {
+        var context = canvas.getContext("2d");
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = "black";
+        context.font = "20px Courier";
+        context.fillText(ileti, 15, 30);
+      }
+
+      function getMousePos(canvas, olay) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: olay.clientX - rect.left,
+          y: olay.clientY - rect.top,
+        };
+      }
+    </script>
+  </body>
+</html>

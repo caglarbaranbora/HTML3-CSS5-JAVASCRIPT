@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>input</title>
+    </head>
+    <body>
+        
+        <input type="text" autocomplete ="off"><br/>
+        <input type="text" autofocus><br/>
+        <input type="submit" formaction="save" value="SAKLA"><br/>
+        <input type="submit" formenctype="application/x-www-form-urlencoded" value="SAKLA"><br/>
+        <input type="submit" formmethod="POST" value=" POST GONDER"><br/>
+        <input type="submit" formnovalidate value="DOGRULAMA"><br/>
+        <input type="submit" formtarget="_blank" value="TAB/WINDOW"><br/>
+        <input type="text" list="characters"><br/>
+        <input type="range" max="100"><br/>
+        <input type="range" min="0"><br/>
+        <input type="file" multiple><br/>
+        <form action="save" method="GET" novalidate><br/>
+            <input type="text" pattern="[A-Z]*"><br/>
+            <input type="placeholder" name="AD" placeholder="İsminizi giriniz"><br/>
+            <input type="text" readonly value="sadece okuyabilirsin enai"><br/>
+            <input type="text" required><br/>
+            <input type="text" spellcheck="true"><br/>
+            <input type="number" step="3"><br/>
+
+
+
+
+            <form  autocomplete="off">
+                AD:    <input type="text" name="ad"><br/>
+                SOYAD: <input type="text" name="soyad"><br/>
+                E-mail:<input type="email" name="email" ><br/>
+                       <input type="submit">
+             </form>
+     
+             <p>FORMUNU DOLDURUNUZ....</p>
+
+
+             <form  novalidate>
+                E-mail: <input type="email" name="KUL_email">
+                        <input type="submit">
+               </form>
+       
+
+               <form>
+                AD:    <input type="text" name="ad" autofocus><br/>
+                SOYAD: <input type="text" name="sad"><br/>
+                       <input type="submit">
+            </form>
+
+
+        <form  id="form1">
+            AD: <input type="text" name="ad"><br/>
+                <input type="submit" value="GONDER">
+        </form>
+        <p>SOYAD ALANI FORMUN DISINDADIR ANCAK HALA FORMUN PARCASIDIR</p>
+       SOYAD: <input type="text" name="soyad" form="form1">
+
+       <form >
+        AD:    <input type="text" name="ad"><br/>
+        SOYAD: <input type="text" name="sad"><br/>
+               <input type="submit" value="GONDER"><br/>
+               <input type="submit" formaction="sec.html" value="sunucu mudahale..">
+    </form>
+ 
+    <form  method="get">
+        AD:    <input type="text" name="ad"><br/>
+        SOYAD: <input type="text" name="sad"><br/>
+               <input type="submit" value="GONDER">
+               <input type="submit" formmethod="post" formaction="sec.html" value="POST ILE GONDER">
+    </form>
+
+        <form action="#">
+          AD:    <input type="text" name="ad"><br />
+          SOYAD: <input type="text" name="sad"><br />
+                 <input type="submit" value="GONDER">
+                 <input type="submit" formtarget="_new" value="YENI PENCERE-GONDER">
+        </form>
+
+
+        <form >
+            <input list="ulkeler" name="ulke">
+            <datalist id="ulkeler">
+            <option value="TURKIYE"/>
+            <option value="ALMANYA"/>
+            <option value="INGILTERE"/>
+            <option value="FRANSA"/>
+            <option value="ITALYA"/>
+            </datalist>
+            <input type="submit">
+       </form>
+
+
+
+        <form >
+            2000-01-01 DEN ONCEKI BIR TARIH GIRIN:
+            <input type="date" name="bgun" max="1999-12-31"><br>
+            2010-01-01 DEN SONRAKI BIR TARIH GIRIN:
+            <input type="date" name="bgun" min="2010-01-02"><br>
+            MIKTAR (1-10 ):
+            <input type="number" name="miktar" min="1" max="10"><br>
+            <input type="submit">
+        </form>
+    
+        <form >
+            ULKE KODU: <input type="text" name="u_kod" pattern="[A-Za-z]{3}" title="UC HARFLIK KOD">
+                       <input type="submit">
+        </form>
+        </body>
+
+</html>

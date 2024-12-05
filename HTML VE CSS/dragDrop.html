@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>İlk HTML Belgesi</title>
+
+    <script>
+      function drag(event) {
+        event.dataTransfer.setData("image", event.target.id);
+      }
+
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="divMain" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img
+        height="100"
+        width="100"
+        id="surukle_nesne"
+        src="assets/image.png"
+        draggable="true"
+        ondragstart="drag(event)"
+      />
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DRAG DROP</title>
+    <style type="text/css">
+      #KUTU1,
+      #KUTU2 {
+        float: left;
+        padding: 10px;
+        margin: 10px;
+        -moz-user-select: none;
+      }
+      #KUTU1 {
+        background-color: #6633ef;
+        width: 85px;
+        height: 85px;
+      }
+      #KUTU2 {
+        background-color: #ff6699;
+        width: 160px;
+        height: 170px;
+      }
+      #KUTU3 {
+        background-color: #ffcc00;
+        width: 160px;
+        height: 170px;
+      }
+    </style>
+    <script type="text/javascript">
+      function dragStart(ev) {
+        ev.dataTransfer.effectAllowed = "move";
+        ev.dataTransfer.setData("text", ev.target.getAttribute("id"));
+        ev.dataTransfer.setDragImage(ev.target, 0, 0);
+        return true;
+      }
+
+      function dragOver(ev) {
+        ev.preventDefault(); // Bırakmaya izin ver
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        const data = ev.dataTransfer.getData("text");
+        const draggedElement = document.getElementById(data);
+        ev.target.appendChild(draggedElement); // Sürüklenen öğeyi bırakma hedefi içine ekle
+      }
+    </script>
+  </head>
+
+  <body>
+    <center>
+      <h2>SÜRÜKLE BIRAK - HTML5</h2>
+      <div>UYGULA</div>
+      <div id="KUTU1" draggable="true" ondragstart="dragStart(event)">
+        <p>SÜRÜKLE</p>
+      </div>
+      <div id="KUTU2" ondrop="drop(event)" ondragover="dragOver(event)"></div>
+      <div id="KUTU3" ondrop="drop(event)" ondragover="dragOver(event)"></div>
+    </center>
+  </body>
+</html>

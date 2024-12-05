@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ORNEK</title>
+  </head>
+
+  <body>
+    <p>
+      <input
+        type="text"
+        name="ARA"
+        id="ARA"
+        placeholder="GIRIS YAP"
+        list="ARA_S"
+        autocomplete="off"
+      />
+      <datalist id="ARA_S">
+        <option>Ahmet Rasim</option>
+        <option>Ahmet Hamdi</option>
+        <option>Refik Halit</option>
+        <option>Halid Ziya</option>
+        <option>Tevfik Fikret</option>
+        <option>Cenap Şahabettin</option>
+      </datalist>
+    </p>
+
+
+    <form action="keygen.php" method="post">
+      Kullanici Adi: <input type="text" name="text">
+      Kodlama: <keygen name="key"><!--calismiyor nedenini bilmiyorum ama amaci key olusturmak-->
+      GONDER:<input type="submit" name="submit" >
+    </form>
+
+
+    <form oninput="yy.value=parseInt(x.value)+parseInt(y.value)">0
+      <input type="range" id="x" value="500">100
+      +<input type="number" id="y" value="500">
+      =<output name="yy" for="x y"></output>
+    </form>
+  </body>
+</html>
